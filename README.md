@@ -1,2 +1,2 @@
-# flatory-meta
-metadata of flatten directory
+# flatory
+flatten directory style utilities
