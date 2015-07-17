@@ -1,0 +1,28 @@
+{
+  "name": "flatory",
+  "version": "0.0.1",
+  "description": "flatten directory structure utilities",
+  "main": "index.js",
+  "dependencies": {
+    "q": "^1.4.1",
+    "mkdirp": "^0.5.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xmhscratch/flatory.git"
+  },
+  "keywords": [
+    "directory", "file", "scanner", "utility"
+  ],
+  "author": "xmhscratch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xmhscratch/flatory/issues"
+  },
+  "homepage": "https://github.com/xmhscratch/flatory"
+}
