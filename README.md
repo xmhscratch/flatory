@@ -2,7 +2,7 @@
 scandir with flat directory style
 
 # What is flat directory structure?
-
+```
   (root)
 	│   app.js
 	│
@@ -33,6 +33,7 @@ scandir with flat directory style
 	    │       comment.jade
 	    │
 	    └───users
+```
 
 ## Installation
 	`$ npm install flatory`
