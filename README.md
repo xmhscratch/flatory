@@ -1,5 +1,38 @@
 # flatory
-flatten directory style
+scandir with flat directory style
+
+# What is flat directory structure?
+
+  (root)
+	│   app.js
+	│
+	├───controllers
+	│       comments.js
+	│       index.js
+	│       users.js
+	│
+	├───helpers
+	│       dates.js
+	│
+	├───middlewares
+	│       auth.js
+	│       users.js
+	│
+	├───models
+	│       comment.js
+	│       user.js
+	│
+	├───public
+	│   ├───css
+	│   ├───img
+	│   └───libs
+	└───views
+	    │   index.jade
+	    │
+	    ├───comments
+	    │       comment.jade
+	    │
+	    └───users
 
 ## Installation
 	`$ npm install flatory`
@@ -8,9 +41,8 @@ flatten directory style
 ```js
 var flatory = require('flatory');
 
-var Directory = flatory.Directory;
-var directory = new Directory('fsa');
-directory.getChildItems();
+var fspath = flatory('./test');
+fspath.getChildItems();
 
 ```
 
