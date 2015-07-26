@@ -1,6 +1,5 @@
 var fs = require('fs');
 var path = require('path');
-var _ = require('underscore');
 
 var Directory = require('./lib/directory');
 var File = require('./lib/file');
