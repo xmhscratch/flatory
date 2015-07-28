@@ -1,7 +1,7 @@
 {
   "name": "flatory",
-  "version": "0.0.1",
-  "description": "flatten directory structure utilities",
+  "version": "0.0.2",
+  "description": "Useful file & directory utility",
   "main": "index.js",
   "dependencies": {
     "q": "^1.4.1",
