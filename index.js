@@ -5,7 +5,9 @@ var Directory = require('./lib/directory');
 var File = require('./lib/file');
 
 module.exports = function(fspath) {
-	fspath = path.join(process.cwd(), fspath);
+	fspath = (false === path.isAbsolute(fspath))
+		? path.join(process.cwd(), fspath)
+		: fspath;
 	fspath = path.normalize(fspath);
 
 	if (/\.[^\/\\.]+$/g.test(fspath)) {
