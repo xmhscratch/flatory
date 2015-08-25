@@ -1,6 +1,6 @@
 {
   "name": "flatory",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Useful file & directory utility",
   "main": "index.js",
   "dependencies": {
@@ -17,7 +17,10 @@
     "url": "https://github.com/xmhscratch/flatory.git"
   },
   "keywords": [
-    "directory", "file", "scanner", "utility"
+    "directory",
+    "file",
+    "scanner",
+    "utility"
   ],
   "author": "xmhscratch",
   "license": "MIT",
