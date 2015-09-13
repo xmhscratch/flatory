@@ -1,31 +1,34 @@
 {
-  "name": "flatory",
-  "version": "0.0.4",
-  "description": "Useful file & directory utility",
-  "main": "index.js",
-  "dependencies": {
-    "q": "^1.4.1",
-    "mkdirp": "^0.5.1",
-    "underscore": "^1.8.3"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/xmhscratch/flatory.git"
-  },
-  "keywords": [
-    "directory",
-    "file",
-    "scanner",
-    "utility"
-  ],
-  "author": "xmhscratch",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/xmhscratch/flatory/issues"
-  },
-  "homepage": "https://github.com/xmhscratch/flatory"
+    "name": "flatory",
+    "version": "0.0.4",
+    "description": "Useful file & directory utility",
+    "main": "index.js",
+    "dependencies": {
+        "mkdirp": "^0.5.1",
+        "q": "^1.4.1",
+        "rimraf": "^2.4.3",
+        "underscore": "^1.8.3"
+    },
+    "devDependencies": {
+        "jasmine-node": "^1.14.5"
+    },
+    "scripts": {
+        "test": "./node_modules/.bin/jasmine-node test/specs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xmhscratch/flatory.git"
+    },
+    "keywords": [
+        "directory",
+        "file",
+        "scanner",
+        "utility"
+    ],
+    "author": "xmhscratch",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/xmhscratch/flatory/issues"
+    },
+    "homepage": "https://github.com/xmhscratch/flatory"
 }
