@@ -1,30 +1,18 @@
-var Item = require('./lib/item');
+var _ = require('lodash');
 var fs = require('fs');
 var path = require('path');
+var Item = require('./lib/item');
 
-module.exports = function(paths, type) {
-    var args = _.toArray(arguments);
-    type = _.last(args);
-    paths = args;
-    if(_.includes([
-        Item.TYPE_DIRECTORY,
-        Item.TYPE_FILE,
-        Item.TYPE_SYMLINK
-    ], type)) {
-        paths = _.initial(args);
-    }else{
-        type = null;
-    }
-    var root = _.chain(paths)
+module.exports = function(paths) {
+    paths = _.toArray(arguments);
+    var basePath = _.chain(paths)
         .compact()
         .map(path.normalize)
         .join(path.sep).value();
-    if(!path.isAbsolute(root)) {
-        root = path.join(path.dirname(process.mainModule.filename), root);
+    if(!path.isAbsolute(basePath)) {
+        basePath = path.join(path.dirname(process.mainModule.filename), basePath);
     }
-
-	var item = new Item(root);
-	return item.toInstance(type);
+	return new Item(basePath);
 }
 
 module.exports.TYPE_DIRECTORY = Item.TYPE_DIRECTORY;
