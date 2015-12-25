@@ -1,0 +1,22 @@
+{
+  "name": "flatory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@pm.micropawns.com:root/flatory.git"
+  },
+  "keywords": [],
+  "author": "xmhscratch",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "mkdirp": "^0.5.1",
+    "q": "^1.4.1",
+    "rimraf": "^2.5.0"
+  }
+}
