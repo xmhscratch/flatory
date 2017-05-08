@@ -4,6 +4,7 @@
   "description": "Useful file & directory utility",
   "main": "index.js",
   "dependencies": {
+    "async": "^2.4.0",
     "lodash": "^4.17.4",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.4.3"
