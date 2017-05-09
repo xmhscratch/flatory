@@ -27,3 +27,6 @@ var rootDir = path.join(__dirname, './test/root')
 //  .rename('blogController1.js')
 // __(rootDir, 'app', 'components', 'blog', 'blogController.js')
 //  .renameAsync('blogController1.js', _.noop)
+
+__(rootDir, '5847.js')
+	.writeAsync('4445345345', _.noop)
