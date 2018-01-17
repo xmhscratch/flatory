@@ -4,18 +4,21 @@ const path = require('path')
 const Item = require('./lib/item')
 
 module.exports = function() {
-    let args = _.toArray(arguments)
+    const args = _.toArray(arguments)
+    const options = _.last(args)
 
-    let paths = args
-    let options = _.last(args)
+    let paths
     if (options && _.isObject(options)) {
     	paths = _.initial(args)
+    } else {
+        paths = args
     }
-
-    let basePath = _.chain(paths)
+    paths = _.chain(paths)
         .compact()
         .map(path.normalize)
-        .join(path.sep).value()
+        .value()
+
+    let basePath = path.join.apply(path, paths)
     if(!path.isAbsolute(basePath)) {
         basePath = path.join(path.dirname(process.mainModule.filename), basePath)
     }
