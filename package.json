@@ -1,6 +1,6 @@
 {
-  "name": "flatory",
-  "version": "0.0.6",
+  "name": "@claimh/flatory",
+  "version": "1.0.0",
   "description": "Useful file & directory utility",
   "main": "index.js",
   "dependencies": {
