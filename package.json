@@ -1,5 +1,5 @@
 {
-  "name": "@claimh/flatory",
+  "name": "flatory",
   "version": "1.0.0",
   "description": "Useful file & directory utility",
   "main": "index.js",
