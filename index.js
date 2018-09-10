@@ -11,9 +11,10 @@ module.exports = () => {
     let paths = args
     if (options && _.isObject(options)) {
     	paths = _.initial(args)
+    } else {
+        paths = args
     }
-
-    let basePath = _.chain(paths)
+    paths = _.chain(paths)
         .compact()
         .map(path.normalize)
         .join(path.sep)
