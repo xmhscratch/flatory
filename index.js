@@ -1,13 +1,14 @@
 const _ = require('lodash')
 const fs = require('fs')
 const path = require('path')
+
 const Item = require('./lib/item')
 
-module.exports = function() {
-    let args = _.toArray(arguments)
+module.exports = () => {
+    const args = _.toArray(arguments)
+    const options = _.last(args)
 
     let paths = args
-    let options = _.last(args)
     if (options && _.isObject(options)) {
     	paths = _.initial(args)
     }
@@ -15,10 +16,13 @@ module.exports = function() {
     let basePath = _.chain(paths)
         .compact()
         .map(path.normalize)
-        .join(path.sep).value()
+        .join(path.sep)
+        .value()
+
     if(!path.isAbsolute(basePath)) {
         basePath = path.join(path.dirname(process.mainModule.filename), basePath)
     }
+
 	return new Item(basePath, options)
 }
 
