@@ -1,0 +1,22 @@
+image: docker:stable
+
+services:
+  - name: docker:dind
+    command: ["--insecure-registry=registry.cicd.claimh.com:5000"]
+
+stages:
+  - publish
+
+variables:
+  DOCKER_DRIVER: overlay
+
+publish:
+  stage: publish
+  image: node:10.14.2-alpine
+  before_script:
+  - sed -i'' -r 's/^( +, uidSupport = ).+$/\1false/' $(dirname $(dirname $(which npm)))/lib/node_modules/npm/node_modules/uid-number/uid-number.js
+  script:
+  - npm unpublish -f flatory
+  - npm publish
+  only:
+  - master
