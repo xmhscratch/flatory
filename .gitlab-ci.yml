@@ -9,6 +9,7 @@ stages:
 
 variables:
   DOCKER_DRIVER: overlay
+  NPM_REGISTRY_URI: registry.cicd.claimh.com:6000
 
 publish:
   stage: publish
@@ -16,7 +17,7 @@ publish:
   before_script:
   - sed -i'' -r 's/^( +, uidSupport = ).+$/\1false/' $(dirname $(dirname $(which npm)))/lib/node_modules/npm/node_modules/uid-number/uid-number.js
   script:
-  - npm unpublish -f flatory
-  - npm publish
+  - npm unpublish -f flatory --registry=http://$NPM_REGISTRY_URI
+  - npm publish --registry=http://$NPM_REGISTRY_URI
   only:
   - master
