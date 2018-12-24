@@ -1,15 +1,16 @@
 image: docker:stable
 
-services:
-  - name: docker:dind
-    command: ["--insecure-registry=registry.cicd.claimh.com:443"]
-
 stages:
   - publish
 
 variables:
   DOCKER_DRIVER: overlay
+  DOCKER_REGISTRY_URI: "registry.cicd.claimh.com:5000"
   NPM_REGISTRY_URI: "registry.cicd.claimh.com:6000"
+
+services:
+  - name: docker:dind
+    command: ["--insecure-registry=$DOCKER_REGISTRY_URI"]
 
 publish:
   stage: publish
