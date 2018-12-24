@@ -9,7 +9,7 @@ stages:
 
 variables:
   DOCKER_DRIVER: overlay
-  NPM_REGISTRY_URI: registry.cicd.claimh.com:6000
+  NPM_REGISTRY_URI: "registry.cicd.claimh.com:6000"
 
 publish:
   stage: publish
