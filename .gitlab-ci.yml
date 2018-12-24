@@ -2,7 +2,7 @@ image: docker:stable
 
 services:
   - name: docker:dind
-    command: ["--insecure-registry=registry.cicd.claimh.com:5000"]
+    command: ["--insecure-registry=registry.cicd.claimh.com:443"]
 
 stages:
   - publish
