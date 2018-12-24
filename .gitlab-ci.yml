@@ -1,20 +1,14 @@
-image: docker:stable
+image: node:10.14.2-alpine
 
 stages:
   - publish
 
 variables:
   DOCKER_DRIVER: overlay
-  DOCKER_REGISTRY_URI: "registry.cicd.claimh.com:5000"
   NPM_REGISTRY_URI: "registry.cicd.claimh.com:6000"
-
-services:
-  - name: docker:dind
-    command: ["--insecure-registry=$DOCKER_REGISTRY_URI"]
 
 publish:
   stage: publish
-  image: node:10.14.2-alpine
   before_script:
   - sed -i'' -r 's/^( +, uidSupport = ).+$/\1false/' $(dirname $(dirname $(which npm)))/lib/node_modules/npm/node_modules/uid-number/uid-number.js
   script:
