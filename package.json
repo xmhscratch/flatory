@@ -14,7 +14,7 @@
     "test": ""
   },
   "publishConfig": {
-    "registry": "http://registry.cicd.claimh.com:6000/"
+    "registry": "https://npm.claimh.com/"
   },
   "repository": {
     "type": "git",

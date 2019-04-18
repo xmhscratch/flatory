@@ -5,13 +5,13 @@ stages:
 
 variables:
   DOCKER_DRIVER: overlay
-  NPM_REGISTRY_URI: "registry.cicd.claimh.com:6000"
+  NPM_REGISTRY_URI: "npm.claimh.com"
 
 publish:
   stage: publish
   before_script:
   - sed -i'' -r 's/^( +, uidSupport = ).+$/\1false/' $(dirname $(dirname $(which npm)))/lib/node_modules/npm/node_modules/uid-number/uid-number.js
   script:
-  - npm publish -f --registry=http://$NPM_REGISTRY_URI/
+  - npm publish -f --registry=https://$NPM_REGISTRY_URI/
   only:
   - master
