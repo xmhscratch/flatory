@@ -4,7 +4,8 @@ stages:
   - publish
 
 variables:
-  DOCKER_DRIVER: overlay
+  GIT_SSL_NO_VERIFY: "true"
+  DOCKER_DRIVER: overlay2
   NPM_REGISTRY_URI: "npm.claimh.com"
 
 publish:
