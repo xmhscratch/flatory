@@ -4,10 +4,11 @@
   "description": "Useful file & directory utility",
   "main": "index.js",
   "dependencies": {
-    "async": "^2.4.0",
-    "lodash": "^4.17.11",
+    "async": "^3.1.0",
+    "bluebird": "^3.5.5",
+    "lodash": "^4.17.15",
     "mkdirp": "^0.5.1",
-    "rimraf": "^2.4.3"
+    "rimraf": "^3.0.0"
   },
   "devDependencies": {},
   "scripts": {

@@ -110,7 +110,7 @@ console.log(result);
  * (return): boolean
  * (params): path[String], options[Object]
  */
-var result = __('/root/index.js').copy('/root/test.js', {
+var result = __('/root/index.js').copySync('/root/test.js', {
     encoding: 'utf8',
     mode: 0700
 });
@@ -121,7 +121,7 @@ console.log(result);
  * (return): boolean
  * (params): path[String], options[Object], callback[Function]
  */
-__('/root/index.js').copyAsync('/root/test.js', {
+__('/root/index.js').copy('/root/test.js', {
     encoding: 'utf8',
     mode: 0700
 }, function(error, data) {
@@ -132,7 +132,7 @@ __('/root/index.js').copyAsync('/root/test.js', {
  * Make sure directory exist
  * (return): boolean
  */
-var result = __('/root/temp').ensure();
+var result = __('/root/temp').ensureSync();
 console.log(result);
 
 /* 
@@ -140,7 +140,7 @@ console.log(result);
  * (return): boolean
  * (params): callback[Function]
  */
-__('/root/temp').ensureAsync(console.log);
+__('/root/temp').ensure(console.log);
 ```
 
 ## Authors
